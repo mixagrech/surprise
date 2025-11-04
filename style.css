@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Audiowide', cursive;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.inder-font {
+  font-family: 'Inder', sans-serif;
+}
+
+.audiowide-font {
+  font-family: 'Audiowide', cursive;
+}
+
+.inter-font {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p, li, a, span, div {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+* {
+  max-width: 100%;
+}
+
+.t {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 200vh;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 8.4vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13.5vw;
+  z-index: 100;
+}
+
+.langChange {
+  display: flex;
+  align-items: center;
+  gap: 0.005vw;
+  font-weight: 600;
+}
+
+.networkLogo {
+  margin-right: 0.1vw;
+}
+
+.linesHeader {
+  width: 101vw;
+  left: -1vw;
+  top: 16vh;
+}
+
+.headerGreetings {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 16vh;
+}
+
+.headerGreetings span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.welcomeText {
+  top: 3%;
+  font-size: 5rem;
+  font-weight: 600;
+  color: black;
+}
+
+.headerGreetings span:last-child {
+  top: 17%;
+  font-size: 7rem;
+  background: linear-gradient(90deg, #2D83EC -3.39%, #1AC9FF 103.36%);
+  font-weight: 600;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.headerGreetings span:last-child p {
+  margin-top: -5%;
+  font-size: 5rem;
+  background: linear-gradient(90deg, #2D83EC -3.39%, #1AC9FF 103.36%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.imageTop {
+  position: absolute;
+  top: 60vh;
+  left: 0%;
+  width: 100vw;
+  height: 50%;
+}
+
+.nearestName {
+  position: absolute;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+.nearestPlans {
+  position: absolute;
+  margin-top: 20vh;
+  left: 18vw;
+  width: 64vw;
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nearestPlan1 {
+  width: 64%;
+  height: 25%;
+  border-radius: 15px;
+  background-color: #F4F4F4;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.nearestPlan2 {
+  width: 40%;
+  left: 0px;
+  height: 25%;
+  border-radius: 15px;
+  background-color: #F4F4F4;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.nearestPlan3 {
+  width: 48%;
+  height: 25%;
+  margin-left: 2vh;
+  border-radius: 15px;
+  background-color: #F4F4F4;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.nearestPlan1 p,
+.nearestPlan2 p,
+.nearestPlan3 p {
+  font-size: 1.2rem;
+  font-weight: 450;
+}
+
+.nearestImg {
+  width: 20px;
+  height: 16px;
+  margin-left: 1.5vw;
+}

@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -83,20 +84,35 @@ html {
   font-size: 16px;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+/* Адаптивная типография */
+h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 3.5vw, 1.75rem); }
+h4 { font-size: clamp(1.125rem, 3vw, 1.5rem); }
+h5 { font-size: clamp(1rem, 2.5vw, 1.25rem); }
+h6 { font-size: clamp(0.875rem, 2vw, 1rem); }
 
 p, li, a, span, div {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
 }
 
 button, input, textarea, select {
@@ -124,44 +140,65 @@ a:focus-visible {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 200vh;
+  top: 418vh;
 }
+
 
 .header {
   position: fixed;
   top: 0px;
   width: 100vw;
   height: 8.4vh;
-  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 13.5vw;
+  padding: 0 5vw;
   z-index: 100;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+
 }
 
 .langChange {
   display: flex;
   align-items: center;
-  gap: 0.005vw;
+  gap: 0.3vw;
   font-weight: 600;
 }
 
 .networkLogo {
-  margin-right: 0.1vw;
+  margin-right: 0.3vw;
+  width: 22px;
+  height: 22px;
+}
+
+.RlLogo {
+    transition: all 0.2s ease-in-out;
+}
+
+.RlLogo:hover {
+    transform: scale(0.95);
+    filter: brightness(1.1);
+}
+
+.RlLogo:active {
+    transform: scale(0.9);
+    filter: brightness(1.2);
+    transition: all 0.1s ease;
 }
 
 .linesHeader {
   width: 101vw;
-  left: -1vw;
-  top: 16vh;
+  position: absolute;
+  height: auto;
 }
 
 .headerGreetings {
   position: relative;
   width: 100vw;
   height: 100vh;
-  top: 16vh;
+  margin-top: 16vh;
 }
 
 .headerGreetings span {
@@ -170,18 +207,20 @@ a:focus-visible {
   transform: translateX(-50%);
   text-align: center;
   z-index: 2;
+  width: 100%;
+  padding: 0 5%;
 }
 
 .welcomeText {
   top: 3%;
-  font-size: 5rem;
+  font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 600;
   color: black;
 }
 
 .headerGreetings span:last-child {
   top: 17%;
-  font-size: 7rem;
+  font-size: clamp(2.5rem, 10vw, 7rem);
   background: linear-gradient(90deg, #2D83EC -3.39%, #1AC9FF 103.36%);
   font-weight: 600;
   -webkit-background-clip: text;
@@ -191,8 +230,8 @@ a:focus-visible {
 }
 
 .headerGreetings span:last-child p {
-  margin-top: -5%;
-  font-size: 5rem;
+  margin-top: -2%;
+  font-size: clamp(2rem, 8vw, 5rem);
   background: linear-gradient(90deg, #2D83EC -3.39%, #1AC9FF 103.36%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -205,68 +244,1107 @@ a:focus-visible {
   top: 60vh;
   left: 0%;
   width: 100vw;
-  height: 50%;
+  height: auto;
+  max-height: 50%;
 }
 
 .nearestName {
   position: absolute;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   color: #000000;
   font-weight: 700;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nearestPlans {
   position: absolute;
-  margin-top: 20vh;
-  left: 18vw;
-  width: 64vw;
-  height: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
+  height: auto;
+  min-height: 30vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 2vh 0;
 }
 
-.nearestPlan1 {
-  width: 64%;
-  height: 25%;
-  border-radius: 15px;
-  background-color: #F4F4F4;
-  margin-top: 10vh;
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-}
-
-.nearestPlan2 {
-  width: 40%;
-  left: 0px;
-  height: 25%;
-  border-radius: 15px;
-  background-color: #F4F4F4;
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-}
-
+.nearestPlan1,
+.nearestPlan2,
 .nearestPlan3 {
-  width: 48%;
-  height: 25%;
-  margin-left: 2vh;
+  width: 100%;
+  height: 80px;
   border-radius: 15px;
   background-color: #F4F4F4;
   display: flex;
   align-items: center;
-  gap: 1vw;
+  gap: 4vw;
+  padding: 0 4vw;
+  margin: 0;
 }
 
 .nearestPlan1 p,
 .nearestPlan2 p,
 .nearestPlan3 p {
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   font-weight: 450;
 }
 
 .nearestImg {
   width: 20px;
   height: 16px;
-  margin-left: 1.5vw;
+  min-width: 20px;
+  margin-left: 0;
 }
+
+.roadmapLong {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
+  height: auto;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 2vh 0;
+  top: 148vh;
+}
+
+.longName {
+  position: absolute;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  color: #000000;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.elipses {
+  flex-direction: column;
+}
+
+.elipseLong1 {
+  margin-top: 10vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 7px solid #E6E6E6;
+  background-color: #CDCDCD;
+  left: 0px;
+}
+
+.elipseLong2 {
+  margin-top: 30vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 7px solid #62C2FF;
+  background-color: #25A2E0;
+}
+
+.elipseLong3 {
+  margin-top: 25vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 7px solid #62C2FF;
+  background-color: #25A2E0;
+}
+
+.elipseLong4 {
+  margin-top: 30vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 7px solid #62C2FF;
+  background-color: #25A2E0;
+}
+
+.panels {
+  flex-direction: column;
+  width: 94%;
+}
+
+.textLongPanel1 {
+  margin-top: 10vh;
+  margin-left: 1vw;
+  width: 100%;
+  height: 30.5vh;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+}
+
+.textLongPanel2 {
+  margin-top: 4.8vh;
+  margin-left: 1vw;
+  width: 100%;
+  height: 25.5vh;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+}
+
+.textLongPanel3 {
+  margin-top: 4.8vh;
+  margin-left: 1vw;
+  width: 100%;
+  height: 31vh;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+}
+
+.textLongPanel4 {
+  margin-top: 4.8vh;
+  margin-left: 1vw;
+  width: 100%;
+  height: 25vh;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+}
+
+.linesElipseLong1 {
+  position: absolute;
+  left: 18px;
+  z-index: -2;
+  background-color: #62C2FF;
+  width: 6px;
+  height: 105vh;
+  margin-top: 10vh;
+}
+
+.linesElipseLong2 {
+  position: absolute;
+  left: 18px;
+  z-index: -1;
+  background: linear-gradient(180deg, #E6E6E6 0%, #62C2FF 100%);
+  width: 6px;
+  height: 31vh;
+  margin-top: 15vh;
+}
+
+
+.technologiesGroup {
+  position: absolute;
+  width: 76vw;
+  left: 12vw;
+  height: 54.5vh;
+  margin-top: 175vh;
+  background-color: #12172C;
+  border-radius: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.technologiesText {
+  margin-left: 7.7%;
+  margin-top: 1%;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+.technologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5vh 1vw;
+  height: calc(100% - 80px);
+  width: calc(100% - 145px);
+  align-content: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.tech-item {
+  background-color: #1E2337;
+  border-radius: 15px;
+  height: calc((93% - 5vh) / 3); /* 3 ряда с отступами */
+  width: calc(40% - 0.5vw); /* 2 колонки с отступами */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+}
+
+.technologies1 { width: calc(40% - 0.5vw); }
+.technologies2 { width: calc(60% - 0.5vw); }
+.technologies3 { width: calc(55% - 0.5vw); }
+.technologies4 { width: calc(45% - 0.5vw); }
+.technologies5 { width: calc(46% - 0.5vw); }
+.technologies6 { width: calc(54% - 0.5vw); }
+
+
+.usingTonConnect {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
+  height: auto;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: row;
+  top: 355vh;
+  align-items: stretch;
+}
+
+.leftUsing {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.usingText {
+  margin-top: 7%;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.usingDataText {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-top: -1.5%;
+}
+
+
+.rightUsing {
+  width: 50%;
+  height: 100%;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+}
+
+.tonLogoUsing {
+  width: 105px;
+  height: 40px;
+  margin-top: 5%;
+  margin-left: 8.8%;
+}
+
+.linesStats1 {
+  width: 82.4%;
+  height: 1.8px;
+  margin-left: 8.8%;
+  margin-top: 2%;
+  background-color: #D9D9D9;
+}
+
+.dataBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82.4%;
+  margin-left: 8.8%;
+  margin-top: 3.8%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.leftData,
+.rightData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 41%;
+  height: 14%;
+  box-sizing: border-box;
+}
+
+.colomnData {
+  width: 1.6px;
+  height: 100%;
+  background-color: #D9D9D9;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.linesStats2 {
+  width: 82.4%;
+  height: 1.6px;
+  margin-left: 8.8%;
+  margin-top: 3.8%;
+  background-color: #D9D9D9;
+}
+
+.volumeD, .transactionD {
+  color: #868686;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tonVolume, .totalTrans {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: -2%;
+}
+
+.tonVolume b {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.bottomData {
+  color: #868686;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82.4%;
+  margin-left: 8.8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  gap: 2%;
+  position: relative;
+}
+
+.bottomData b {
+  color: #000000;
+}
+
+
+.bottomPanel {
+  position: absolute;
+  width: 76vw;
+  left: 12vw;
+  height: auto;
+  top: 405vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.bottomTopLine {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #F1F1F1;
+}
+
+.RlLog2 {
+  flex-shrink: 0;
+}
+
+.rlBtn {
+  width: auto;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #1E2337;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0098EA;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0 25px;
+  font-weight: 600;
+}
+
+.logotipes {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.telegramLogo,
+.twitterLogo,
+.mailLogo {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.telegramLogo:hover,
+.twitterLogo:hover,
+.mailLogo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+
+
+
+/* Планшеты в вертикальной ориентации и маленькие ноутбуки */
+/* iPad Mini, стандартные планшеты */
+@media (min-width: 768px) {
+  .header {
+    padding: 0 10vw;
+  }
+  
+  .nearestPlans {
+    width: 80vw;
+    gap: 3vh;
+  }
+  
+  .nearestPlan1,
+  .nearestPlan2,
+  .nearestPlan3 {
+    height: 90px;
+    gap: 2vw;
+    padding: 0 3vw;
+  }
+  
+  .nearestImg {
+    margin-left: 1vw;
+  }
+
+  .roadmapLong {
+    width: 80vw;
+    gap: 3vh;
+  }
+}
+
+
+/* Ноутбуки и большие планшеты в горизонтальной ориентации */
+/* iPad Pro, ноутбуки 13-15" */
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 13.5vw;
+  }
+  
+  .nearestPlans {
+    width: 64vw;
+    left: 18vw;
+    transform: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 30vh;
+    gap: 0;
+  }
+  
+  .nearestName {
+    text-align: left;
+    width: 100%;
+    left: 1vw;
+    transform: none;
+  }
+  
+  .nearestPlan1 {
+    width: 64%;
+    height: 25%;
+    margin-top: 10vh;
+    gap: 1vw;
+  }
+  
+  .nearestPlan2 {
+    width: 40%;
+    height: 25%;
+    gap: 1vw;
+  }
+  
+  .nearestPlan3 {
+    width: 48%;
+    height: 25%;
+    margin-left: 2vh;
+    gap: 1vw;
+  }
+  
+  .nearestPlan1 p,
+  .nearestPlan2 p,
+  .nearestPlan3 p {
+    font-size: 1.2rem;
+  }
+
+  .nearestPlan1 svg,
+  .nearestPlan2 svg,
+  .nearestPlan3 svg {
+    margin-left: -1.5rem;
+  }
+  
+  .nearestImg {
+    margin-left: 1.5vw;
+  }
+
+  .roadmapLong {
+    width: 64vw;
+    left: 18vw;
+    transform: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 30vh;
+    gap: 0;
+  }
+
+  .usingTonConnect {
+    width: 64vw;
+    left: 18vw;
+    transform: none;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 30vh;
+  }
+  
+  .longName {
+    text-align: left;
+    width: 100%;
+    left: 1vw;
+    transform: none;
+  }
+}
+
+/* phones */
+@media (max-width: 480px) {
+  .header {
+    height: 70px;
+    padding: 0 5vw;
+  }
+
+  .headerGreetings {
+    margin-top: 12vh;
+    height: 80vh;
+  }
+  
+  .welcomeText {
+    top: 5%;
+  }
+  
+  .headerGreetings span:last-child {
+    top: 20%;
+  }
+  
+  .nearestPlans {
+    margin-top: 15vh;
+    gap: 1.5vh;
+  }
+
+  .nearestName {
+    margin-top: -7vh;
+  }
+  
+  .nearestPlan1,
+  .nearestPlan2,
+  .nearestPlan3 {
+    height: 70px;
+    gap: 5vw;
+    padding: 0 5vw;
+  }
+  
+  .nearestPlan1 p,
+  .nearestPlan2 p,
+  .nearestPlan3 p {
+    font-size: 0.9rem;
+  }
+
+  .roadmapLong {
+    margin-top: 36vh;
+    gap: 1.5vh;
+  }
+
+
+
+
+  .headerGreetings {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 16vh;
+    overflow: hidden;
+  }
+
+  .headerGreetings span {
+    padding: 0 3%;
+  }
+
+  * {
+    max-width: 140%;
+  }
+
+  .linesHeader {
+    width: 140vw;
+    position: absolute;
+    left: -15vw;
+    height: auto;
+  }
+
+  .welcomeText {
+    top: -1%;
+    font-size: 1.6rem;
+  }
+
+  .headerGreetings span:last-child {
+    top: 4.5%;
+    font-size: 3rem;
+  }
+
+  .headerGreetings span:last-child p {
+    font-size: 2rem;
+  }
+
+  .imageTop {
+    top: 40vh;
+  }
+  
+  .nearestPlans {
+    top: 50vh;
+  }
+
+  .nearestPlan1,
+  .nearestPlan2,
+  .nearestPlan3 {
+    padding: 0 4vw;
+    gap: 3vw;
+    height: 46px;
+  }
+  
+  .nearestPlan1 p,
+  .nearestPlan2 p,
+  .nearestPlan3 p {
+    font-size: 0.8rem;
+  }
+
+  .roadmapLong {
+    top: 61vh;
+    flex-direction: row;
+  }
+  
+  .elipseLong1 {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #E6E6E6;
+  }
+
+  .elipseLong2,
+  .elipseLong3,
+  .elipseLong4 {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #62C2FF;
+  }
+
+  .linesElipseLong1 {
+    left: 13px;
+    height: 99vh;
+    margin-top: 13vh;
+  }
+
+  .linesElipseLong2 {
+    left: 13px;
+    height: 31vh;
+    margin-top: 14vh;
+  }
+
+  .panels {
+    flex-direction: column;
+    width: 94%;
+  }
+
+  .textLongPanel2,
+  .textLongPanel3,
+  .textLongPanel4 {
+    margin-top: 4vh;
+  }
+
+
+  .technologiesGroup {
+    margin-top: 124vh;
+    left: 5vw;
+    width: 90vw;
+    height: 81vh;
+    text-align: center;
+  }
+
+  .technologiesText {
+    font-size: 1.2rem;
+    margin-left: 0px;
+  }
+
+  .technologies-container {
+    display: block;
+    gap: 2.5vh;
+    height: calc(100% - 10%);
+    width: 100%;
+    margin: 0 0;
+  }
+
+  .tech-item {
+    height: calc((93% - 53%) / 3);
+    margin-bottom: 2.5vh;
+    border-radius: 10px;
+  }
+
+  .tech-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .technologies1 { width: 90%; }
+  .technologies2 { width: 80%; }
+  .technologies3 { width: 95%; }
+  .technologies4 { width: 87%; }
+  .technologies5 { width: 100%; }
+  .technologies6 { width: 70%; }
+
+  .usingTonConnect {
+    flex-direction: column;
+    top: 325vh;
+  }
+
+  .leftUsing {
+    width: 100%;
+  }
+
+  .usingText {
+    font-size: 1.2rem;
+  }
+
+  .usingDataText {
+    font-size: 0.9rem;
+  }
+
+  .rightUsing {
+    width: 100%;
+    height: 100%;
+    background-color: #F4F4F4;
+    border-radius: 15px;
+    margin-top: 7vh;
+  }
+
+  .tonLogoUsing {
+    width: 72px;
+    height: 30px;
+  }
+
+  .linesStats1 {
+    margin-top: 0.5%;
+  }
+
+  .volumeD,
+  .transactionD {
+    font-size: 0.7rem;
+  }
+
+  .bottomData {
+    font-size: 0.7rem;
+  }
+
+  .tonVolume, .totalTrans {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: -2%;
+  }
+
+  .tonVolume b {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+
+  .bottomPanel {
+    width: 88vw;
+    left: 6vw;
+    top: 380vh;
+  }
+
+  .rlBtn {
+    height: 35px;
+    margin-top: -13%;
+  }
+
+  .logotipes,
+  .RlLog2 {
+    margin-top: 10%;
+  }
+
+  .t {
+    top: 0vh;
+  }
+}
+
+/* Телефоны в альбомной ориентации */
+/* Когда высота экрана маленькая, но ширина большая */
+@media (max-height: 600px) and (orientation: landscape) {
+  .headerGreetings {
+    height: 120vh;
+  }
+  
+  .headerGreetings span:last-child {
+    top: 15%;
+  }
+  
+  .nearestPlans {
+    margin-top: 15vh;
+  }
+  
+  .nearestPlan1,
+  .nearestPlan2,
+  .nearestPlan3 {
+    height: 60px;
+  }
+
+  .roadmapLong {
+    margin-top: 1vh;
+  }
+}
+
+/* Маленькие телефоны (iPhone 5/SE и подобные) */
+@media (max-width: 360px) {
+
+  .longName {
+    font-size: 1.2rem;
+  }
+
+  .nearestName {
+    font-size: 1.2rem;
+  }
+
+  .headerGreetings {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 16vh;
+    overflow: hidden;
+  }
+
+  .headerGreetings span {
+    padding: 0 3%;
+  }
+
+  * {
+    max-width: 140%;
+  }
+
+  .linesHeader {
+    width: 140vw;
+    position: absolute;
+    left: -15vw;
+    height: auto;
+  }
+
+  .welcomeText {
+    top: -1%;
+    font-size: 1.6rem;
+  }
+
+  .headerGreetings span:last-child {
+    top: 4.5%;
+    font-size: 3rem;
+  }
+
+  .headerGreetings span:last-child p {
+    font-size: 2rem;
+  }
+
+  .imageTop {
+    top: 40vh;
+  }
+  
+  .nearestPlans {
+    top: 50vh;
+  }
+
+  .nearestPlan1,
+  .nearestPlan2,
+  .nearestPlan3 {
+    padding: 0 4vw;
+    gap: 3vw;
+    height: 46px;
+  }
+  
+  .nearestPlan1 p,
+  .nearestPlan2 p,
+  .nearestPlan3 p {
+    font-size: 0.8rem;
+  }
+
+  .roadmapLong {
+    top: 61vh;
+    flex-direction: row;
+  }
+  
+  .elipseLong1 {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #E6E6E6;
+  }
+
+  .elipseLong2,
+  .elipseLong3,
+  .elipseLong4 {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #62C2FF;
+  }
+
+  .linesElipseLong1 {
+    left: 13px;
+    height: 99vh;
+    margin-top: 13vh;
+  }
+
+  .linesElipseLong2 {
+    left: 13px;
+    height: 31vh;
+    margin-top: 14vh;
+  }
+
+  .panels {
+    flex-direction: column;
+    width: 94%;
+  }
+
+  .textLongPanel2,
+  .textLongPanel3,
+  .textLongPanel4 {
+    margin-top: 4vh;
+  }
+
+
+  .technologiesGroup {
+    margin-top: 124vh;
+    left: 5vw;
+    width: 90vw;
+    height: 81vh;
+    text-align: center;
+  }
+
+  .technologiesText {
+    font-size: 1.2rem;
+    margin-left: 0px;
+  }
+
+  .technologies-container {
+    display: block;
+    gap: 2.5vh;
+    height: calc(100% - 10%);
+    width: 100%;
+    margin: 0 0;
+  }
+
+  .tech-item {
+    height: calc((93% - 53%) / 3);
+    margin-bottom: 2.5vh;
+    border-radius: 10px;
+  }
+
+  .tech-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .technologies1 { width: 90%; }
+  .technologies2 { width: 80%; }
+  .technologies3 { width: 95%; }
+  .technologies4 { width: 87%; }
+  .technologies5 { width: 100%; }
+  .technologies6 { width: 70%; }
+
+  .usingTonConnect {
+    flex-direction: column;
+    top: 325vh;
+  }
+
+  .leftUsing {
+    width: 100%;
+  }
+
+  .usingText {
+    font-size: 1.2rem;
+  }
+
+  .usingDataText {
+    font-size: 0.9rem;
+  }
+
+  .rightUsing {
+    width: 100%;
+    height: 100%;
+    background-color: #F4F4F4;
+    border-radius: 15px;
+    margin-top: 7vh;
+  }
+
+  .tonLogoUsing {
+    width: 72px;
+    height: 30px;
+  }
+
+  .linesStats1 {
+    margin-top: 0.5%;
+  }
+
+  .volumeD,
+  .transactionD {
+    font-size: 0.7rem;
+  }
+
+  .bottomData {
+    font-size: 0.7rem;
+  }
+
+  .tonVolume, .totalTrans {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: -2%;
+  }
+
+  .tonVolume b {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+
+  .bottomPanel {
+    width: 88vw;
+    left: 6vw;
+    top: 380vh;
+  }
+
+  .rlBtn {
+    height: 35px;
+    margin-top: -20%;
+  }
+
+  .logotipes,
+  .RlLog2 {
+    margin-top: 15%;
+  }
+
+  .t {
+    top: 0vh;
+  }
+}
+
+
+
+
+
+/* Большие мониторы и десктопы */
+/* Мониторы 1440px и больше */
+@media (min-width: 1440px) {
+  .nearestPlans {
+    width: 64vw;
+    left: 18vw;
+  }
+  
+  .nearestPlan1,
+  .nearestPlan2,
+  .nearestPlan3 {
+    gap: 1vw;
+  }
+
+  .roadmapLong {
+    width: 64vw;
+    left: 18vw;
+  }
+}
+

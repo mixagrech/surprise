@@ -587,9 +587,16 @@ a:focus-visible {
   background-color: #D9D9D9;
 }
 
-.volumeD, .transactionD {
+.volumeD {
   color: #868686;
   font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.transactionD {
+  color: #868686;
+  font-size: 0.8rem;
   font-weight: 400;
   margin: 0;
 }
@@ -1294,9 +1301,12 @@ a:focus-visible {
     margin-top: 0.5%;
   }
 
-  .volumeD,
-  .transactionD {
+  .volumeD {
     font-size: 0.7rem;
+  }
+
+  .transactionD {
+    font-size: 0.55rem;
   }
 
   .bottomData {

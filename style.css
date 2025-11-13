@@ -1078,7 +1078,7 @@ a:focus-visible {
 
   .linesElipseLong1 {
     left: 13px;
-    height: 83vh;
+    height: 86vh;
     margin-top: 13vh;
   }
 
@@ -1298,6 +1298,10 @@ a:focus-visible {
     width: 60px;
     margin-left: 38%;
   }
+
+  .elipseLong4 {
+    margin-top: 24vh;
+  }
 }
 
 /* Телефоны в альбомной ориентации */
@@ -1417,7 +1421,7 @@ a:focus-visible {
 
   .linesElipseLong1 {
     left: 13px;
-    height: 83vh;
+    height: 86vh;
     margin-top: 13vh;
   }
 
@@ -1641,6 +1645,10 @@ a:focus-visible {
     width: 60px;
     margin-left: 38%;
   }
+
+  .elipseLong4 {
+    margin-top: 24vh;
+  }
 }
 
 
@@ -1666,4 +1674,3 @@ a:focus-visible {
     left: 18vw;
   }
 }
-

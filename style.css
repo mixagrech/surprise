@@ -140,7 +140,7 @@ a:focus-visible {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 418vh;
+  top: 408vh;
 }
 
 
@@ -301,7 +301,14 @@ a:focus-visible {
 
 .nearestImg {
   width: 20px;
-  height: 16px;
+  height: 18px;
+  min-width: 20px;
+  margin-left: 0;
+}
+
+.nearestImg2 {
+  width: 2px;
+  height: 20px;
   min-width: 20px;
   margin-left: 0;
 }
@@ -347,15 +354,6 @@ a:focus-visible {
 }
 
 .elipseLong2 {
-  margin-top: 30vh;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 7px solid #62C2FF;
-  background-color: #25A2E0;
-}
-
-.elipseLong3 {
   margin-top: 25vh;
   width: 40px;
   height: 40px;
@@ -364,8 +362,17 @@ a:focus-visible {
   background-color: #25A2E0;
 }
 
+.elipseLong3 {
+  margin-top: 20.8vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 7px solid #62C2FF;
+  background-color: #25A2E0;
+}
+
 .elipseLong4 {
-  margin-top: 30vh;
+  margin-top: 21vh;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -382,37 +389,133 @@ a:focus-visible {
   margin-top: 10vh;
   margin-left: 1vw;
   width: 100%;
-  height: 30.5vh;
-  background-color: #F4F4F4;
+  height: 25vh;
+  background: linear-gradient(90deg, #F4F4F4 0%, #E2F4FF 100%);
   border-radius: 15px;
 }
+
+.titleLong1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 5%;
+  padding-top: 3vh;
+}
+
+.textLong1 {
+  margin-left: 3%;
+}
+
+.textLong1 b {
+  font-weight: 600;
+}
+
+.imgLong1 {
+  position: absolute;
+  margin-left: 77%;
+  top: 14vh;
+  width: 100px;
+  height: 100px;
+}
+
 
 .textLongPanel2 {
   margin-top: 4.8vh;
   margin-left: 1vw;
   width: 100%;
-  height: 25.5vh;
-  background-color: #F4F4F4;
+  height: 21.5vh;
+  background: linear-gradient(90deg, #F4F4F4 0%, #E2F4FF 100%);
   border-radius: 15px;
 }
+
+.titleLong2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 5%;
+  padding-top: 3vh;
+}
+
+.textLong2 {
+  margin-left: 3%;
+}
+
+.textLong2 b {
+  font-weight: 600;
+}
+
+.imgLong2 {
+  position: absolute;
+  margin-left: 80%;
+  top: 44vh;
+  width: 100px;
+  height: 100px;
+}
+
 
 .textLongPanel3 {
   margin-top: 4.8vh;
   margin-left: 1vw;
   width: 100%;
-  height: 31vh;
-  background-color: #F4F4F4;
+  height: 21.5vh;
+  background: linear-gradient(90deg, #F4F4F4 0%, #E2F4FF 100%);
   border-radius: 15px;
 }
+
+.titleLong3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 5%;
+  padding-top: 3vh;
+}
+
+.textLong3 {
+  margin-left: 3%;
+}
+
+.textLong3 b {
+  font-weight: 600;
+}
+
+.imgLong3 {
+  position: absolute;
+  margin-left: 80%;
+  top: 70vh;
+  width: 100px;
+  height: 100px;
+}
+
 
 .textLongPanel4 {
   margin-top: 4.8vh;
   margin-left: 1vw;
   width: 100%;
-  height: 25vh;
-  background-color: #F4F4F4;
+  height: 32vh;
+  background: linear-gradient(90deg, #F4F4F4 0%, #E2F4FF 100%);
   border-radius: 15px;
 }
+
+.titleLong4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 5%;
+  padding-top: 3vh;
+}
+
+.textLong4 {
+  margin-left: 3%;
+}
+
+.textLong4 b {
+  font-weight: 600;
+}
+
+.imgLong4 {
+  position: absolute;
+  margin-left: 80%;
+  top: 96vh;
+  width: 100px;
+  height: 100px;
+}
+
 
 .linesElipseLong1 {
   position: absolute;
@@ -420,7 +523,7 @@ a:focus-visible {
   z-index: -2;
   background-color: #62C2FF;
   width: 6px;
-  height: 105vh;
+  height: 86vh;
   margin-top: 10vh;
 }
 
@@ -430,7 +533,7 @@ a:focus-visible {
   z-index: -1;
   background: linear-gradient(180deg, #E6E6E6 0%, #62C2FF 100%);
   width: 6px;
-  height: 31vh;
+  height: 25vh;
   margin-top: 15vh;
 }
 
@@ -440,7 +543,7 @@ a:focus-visible {
   width: 76vw;
   left: 12vw;
   height: 54.5vh;
-  margin-top: 175vh;
+  margin-top: 165vh;
   background-color: #12172C;
   border-radius: 30px;
   padding: 20px;
@@ -474,18 +577,31 @@ a:focus-visible {
   width: calc(40% - 0.5vw); /* 2 колонки с отступами */
   display: flex;
   align-items: center;
-  justify-content: center;
   color: white;
   font-size: 1.2rem;
   box-sizing: border-box;
+  padding-left: 1vw;
 }
 
-.technologies1 { width: calc(40% - 0.5vw); }
-.technologies2 { width: calc(60% - 0.5vw); }
+.tech-item svg {
+  margin-right: 1vw;
+}
+
+.tech-item p {
+  margin: 0;
+  line-height: calc(1em + 5px); /* Расстояние между строками 5px */
+}
+
+.biggerTech {
+  font-size: 1.21rem;
+}
+
+.technologies1 { width: calc(50% - 0.5vw); }
+.technologies2 { width: calc(50% - 0.5vw); }
 .technologies3 { width: calc(55% - 0.5vw); }
 .technologies4 { width: calc(45% - 0.5vw); }
-.technologies5 { width: calc(46% - 0.5vw); }
-.technologies6 { width: calc(54% - 0.5vw); }
+.technologies5 { width: calc(40% - 0.5vw); }
+.technologies6 { width: calc(60% - 0.5vw); }
 
 
 .usingTonConnect {
@@ -498,7 +614,7 @@ a:focus-visible {
   min-height: 30vh;
   display: flex;
   flex-direction: row;
-  top: 355vh;
+  top: 345vh;
   align-items: stretch;
 }
 
@@ -636,7 +752,7 @@ a:focus-visible {
   width: 76vw;
   left: 12vw;
   height: auto;
-  top: 405vh;
+  top: 395vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -874,6 +990,14 @@ a:focus-visible {
 
 
 
+   .longName {
+    font-size: 1.15rem;
+  }
+
+  .nearestName {
+    font-size: 1.2rem;
+  }
+
   .headerGreetings {
     position: relative;
     width: 100vw;
@@ -954,19 +1078,19 @@ a:focus-visible {
 
   .linesElipseLong1 {
     left: 13px;
-    height: 97vh;
+    height: 83vh;
     margin-top: 13vh;
   }
 
   .linesElipseLong2 {
     left: 13px;
-    height: 31vh;
+    height: 28vh;
     margin-top: 14vh;
   }
 
   .panels {
     flex-direction: column;
-    width: 94%;
+    width: 96%;
   }
 
   .textLongPanel2,
@@ -1003,16 +1127,37 @@ a:focus-visible {
     border-radius: 10px;
   }
 
+  .tech-item svg {
+    margin-left: 3vw;
+  }
+
+  .tech-item p {
+    font-size: 0.8rem;
+  }
+
   .tech-item:last-child {
     margin-bottom: 0;
+    margin-right: 2vw;
   }
 
   .technologies1 { width: 90%; }
-  .technologies2 { width: 80%; }
-  .technologies3 { width: 95%; }
-  .technologies4 { width: 87%; }
+  .technologies2 { width: 88%; }
+  .technologies3 { width: 100%; }
+  .technologies4 { width: 85%; }
   .technologies5 { width: 100%; }
-  .technologies6 { width: 70%; }
+  .technologies6 { width: 100%; }
+
+  .technologies4 p {
+    margin-left: 3vw;
+  }
+
+  .technologies5 p {
+    margin-left: 3vw;
+  }
+
+  .technologies6 p {
+    font-size: 0.75rem;
+  }
 
   .usingTonConnect {
     flex-direction: column;
@@ -1048,9 +1193,12 @@ a:focus-visible {
     margin-top: 0.5%;
   }
 
-  .volumeD,
-  .transactionD {
+  .volumeD {
     font-size: 0.7rem;
+  }
+
+  .transactionD {
+    font-size: 0.55rem;
   }
 
   .bottomData {
@@ -1077,16 +1225,78 @@ a:focus-visible {
 
   .rlBtn {
     height: 35px;
-    margin-top: -13%;
+    margin-top: -20%;
   }
 
   .logotipes,
   .RlLog2 {
-    margin-top: 10%;
+    margin-top: 15%;
   }
-
+  
   .t {
     top: 0vh;
+  }
+
+  .titleLong1,
+  .titleLong2,
+  .titleLong3,
+  .titleLong4 {
+    font-size: 1.05rem;
+    padding-top: 0.7rem;
+    margin-left: 8%;
+  }
+
+  .textLong1,
+  .textLong2,
+  .textLong3,
+  .textLong4 {
+    font-size: 0.7rem;
+    margin-left: 5%;
+    width: 90%;
+  }
+  
+  .textLongPanel1 {
+    height: 27vh;
+  }
+
+  .elipseLong2 {
+    margin-top: 27vh;
+  }
+
+  .imgLong1 {
+    width: 40px;
+    margin-left: 43%;
+    top: 8vh;
+  }
+
+  .imgLong2 {
+    width: 40px;
+    margin-left: 53%;
+    top: 39vh;
+  }
+
+  .textLongPanel2,
+  .textLongPanel3  {
+    height: 24.5vh;
+  }
+
+  .elipseLong3 {
+    margin-top: 23.5vh;
+  }
+
+  .imgLong3 {
+    width: 35px;
+    margin-left: 70%;
+    top: 68vh;
+  }
+  
+  .textLongPanel4 {
+    height: 38.5vh;
+  }
+ 
+  .imgLong4 {
+    width: 60px;
+    margin-left: 38%;
   }
 }
 
@@ -1207,19 +1417,19 @@ a:focus-visible {
 
   .linesElipseLong1 {
     left: 13px;
-    height: 97vh;
+    height: 83vh;
     margin-top: 13vh;
   }
 
   .linesElipseLong2 {
     left: 13px;
-    height: 31vh;
+    height: 28vh;
     margin-top: 14vh;
   }
 
   .panels {
     flex-direction: column;
-    width: 94%;
+    width: 96%;
   }
 
   .textLongPanel2,
@@ -1256,16 +1466,41 @@ a:focus-visible {
     border-radius: 10px;
   }
 
+  .tech-item svg {
+    margin-left: 3vw;
+  }
+
+  .tech-item p {
+    font-size: 0.8rem;
+  }
+
   .tech-item:last-child {
     margin-bottom: 0;
+    margin-right: 2vw;
   }
 
   .technologies1 { width: 90%; }
-  .technologies2 { width: 80%; }
-  .technologies3 { width: 95%; }
-  .technologies4 { width: 87%; }
+  .technologies2 { width: 100%; }
+  .technologies3 { width: 100%; }
+  .technologies4 { width: 85%; }
   .technologies5 { width: 100%; }
-  .technologies6 { width: 70%; }
+  .technologies6 { width: 100%; }
+
+  .technologies4 p {
+    margin-left: 3vw;
+  }
+
+  .technologies2 p {
+    font-size: 0.6rem;
+  }
+
+  .technologies5 p {
+    margin-left: 3vw;
+  }
+
+  .technologies6 p {
+    font-size: 0.75rem;
+  }
 
   .usingTonConnect {
     flex-direction: column;
@@ -1344,10 +1579,69 @@ a:focus-visible {
   .t {
     top: 0vh;
   }
+
+  .titleLong1,
+  .titleLong2,
+  .titleLong3,
+  .titleLong4 {
+    font-size: 1.05rem;
+    padding-top: 0.7rem;
+    margin-left: 8%;
+  }
+
+  .textLong1,
+  .textLong2,
+  .textLong3,
+  .textLong4 {
+    font-size: 0.7rem;
+    margin-left: 5%;
+    width: 90%;
+  }
+  
+  .textLongPanel1 {
+    height: 27vh;
+  }
+
+  .elipseLong2 {
+    margin-top: 27vh;
+  }
+
+  .imgLong1 {
+    width: 40px;
+    margin-left: 43%;
+    top: 8vh;
+  }
+
+  .imgLong2 {
+    width: 40px;
+    margin-left: 53%;
+    top: 39vh;
+  }
+
+  .textLongPanel2,
+  .textLongPanel3  {
+    height: 24.5vh;
+  }
+
+  .elipseLong3 {
+    margin-top: 23.5vh;
+  }
+
+  .imgLong3 {
+    width: 35px;
+    margin-left: 70%;
+    top: 68vh;
+  }
+  
+  .textLongPanel4 {
+    height: 38.5vh;
+  }
+ 
+  .imgLong4 {
+    width: 60px;
+    margin-left: 38%;
+  }
 }
-
-
-
 
 
 /* Большие мониторы и десктопы */
@@ -1369,4 +1663,3 @@ a:focus-visible {
     left: 18vw;
   }
 }
-

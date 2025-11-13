@@ -42,7 +42,7 @@ function setLanguage(lang) {
             else if (selectedLang === 'ru' && isMobile && selector.startsWith('.technologies') && selector.endsWith(' p')) {
                 const cleanValue = value.replace(/style=['"][^'"]*['"]/g, '');
                 element.innerHTML = cleanValue;
-                element.style.fontSize = 'calc(1rem - 0.3rem)';
+                element.style.fontSize = 'calc(1rem - 0rem)';
             }
             else if (selectedLang === 'ru' && selector.startsWith('.textLong')) {
                 const cleanValue = value.replace(/style=['"][^'"]*['"]/g, '');

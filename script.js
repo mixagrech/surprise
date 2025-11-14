@@ -39,10 +39,20 @@ function setLanguage(lang) {
             if (selectedLang === 'ru' && isMobile && selector.startsWith('.textLong')) {
                 element.innerHTML = value;
             } 
+            else if (selectedLang === 'ru' && isMobile && selector.startsWith('.technologies6') && selector.endsWith(' p')) {
+                const cleanValue = value.replace(/style=['"][^'"]*['"]/g, '');
+                element.innerHTML = cleanValue;
+                element.style.fontSize = '0.6rem';
+            }
             else if (selectedLang === 'ru' && isMobile && selector.startsWith('.technologies') && selector.endsWith(' p')) {
                 const cleanValue = value.replace(/style=['"][^'"]*['"]/g, '');
                 element.innerHTML = cleanValue;
                 element.style.fontSize = 'calc(1rem - 0.3rem)';
+            }
+            else if (selectedLang === 'ru' && isMobile && selector.startsWith('.titleLong3')) {
+                const cleanValue = value.replace(/style=['"][^'"]*['"]/g, '');
+                element.innerHTML = cleanValue;
+                element.style.fontSize = '0.9rem';
             }
             else if (selectedLang === 'ru' && selector.startsWith('.textLong')) {
                 const cleanValue = value.replace(/style=['"][^'"]*['"]/g, '');
@@ -141,6 +151,10 @@ const locales = {
         '.technologies4 p': "Unique game mechanics",
         '.technologies5 p': "Fast confirmation of transactions",
         '.technologies6 p': "Optimized performance for a smooth gaming experience",
+        '.titleLong1': 'Leaderboard',
+        '.titleLong2': 'P2P marketplace',
+        '.titleLong3': 'Exclusive accessories',
+        '.titleLong4': 'VIP status',
     },
     ru: {
         '.lang': 'Рус',
@@ -167,6 +181,10 @@ const locales = {
         '.technologies4 p': "Уникальная игровая механика",
         '.technologies5 p': "Быстрое подтверждение операций",
         '.technologies6 p': "Оптимизированная производительность для комфортной игры",
+        '.titleLong1': 'Таблица лидеров',
+        '.titleLong2': 'P2P-рынок',
+        '.titleLong3': 'Эксклюзивные аксессуары',
+        '.titleLong4': 'VIP-статус',
     }
 };
 

@@ -1265,7 +1265,7 @@ a:focus-visible {
 
   .imgLong1 {
     width: 40px;
-    margin-left: 43%;
+    margin-left: 55%;
     top: 8vh;
   }
 
@@ -1287,7 +1287,7 @@ a:focus-visible {
   .imgLong3 {
     width: 35px;
     margin-left: 70%;
-    top: 68vh;
+    top: 67.5vh;
   }
   
   .textLongPanel4 {
@@ -1612,7 +1612,7 @@ a:focus-visible {
 
   .imgLong1 {
     width: 40px;
-    margin-left: 43%;
+    margin-left: 55%;
     top: 8vh;
   }
 
@@ -1634,7 +1634,7 @@ a:focus-visible {
   .imgLong3 {
     width: 35px;
     margin-left: 70%;
-    top: 68vh;
+    top: 67.5vh;
   }
   
   .textLongPanel4 {
@@ -1650,9 +1650,6 @@ a:focus-visible {
     margin-top: 24vh;
   }
 }
-
-
-
 
 
 /* Большие мониторы и десктопы */

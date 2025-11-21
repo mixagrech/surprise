@@ -194,6 +194,6 @@ window.addEventListener('resize', function() {
 });
 
 document.querySelector('.privacyBtn').addEventListener('click', function() {
-    window.location.href = '/surprise/privacy';
+    window.location.href = 'https://mixagrech.github.io/surprise/privacy';
 });
 

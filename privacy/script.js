@@ -5,13 +5,6 @@ document.querySelector('.back').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function() {
     const topBtn = document.getElementById('topBtn');
     
-    if (!topBtn) {
-        console.error('Кнопка topBtn не найдена!');
-        return;
-    }
-    
-    console.log('Кнопка найдена, скрипт запущен');
-    
     function toggleTopButton() {
         if (window.pageYOffset > 300) {
             topBtn.classList.add('show');

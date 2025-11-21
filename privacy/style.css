@@ -1,0 +1,359 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: inherit;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.inder-font {
+  font-family: 'Inder', sans-serif;
+}
+
+.audiowide-font {
+  font-family: 'Audiowide', cursive;
+}
+
+.inter-font {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Адаптивная типография */
+h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 3.5vw, 1.75rem); }
+h4 { font-size: clamp(1.125rem, 3vw, 1.5rem); }
+h5 { font-size: clamp(1rem, 2.5vw, 1.25rem); }
+h6 { font-size: clamp(0.875rem, 2vw, 1rem); }
+
+p, li, a, span, div {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+* {
+  max-width: 100%;
+}
+
+p {
+    font-size: 1rem;
+    margin-top: 4vh;
+}
+
+li {
+    margin-left: 1vw;
+}
+
+li::marker {
+    color: #0098ea;
+    font-size: 20px;
+}
+
+.firstLi {
+    margin-top: 2vh;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 5vh;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 4vh;
+}
+
+
+.framework {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    left: 25vw;
+    text-align: start;
+    top: 17vh;
+}
+
+.mainHeading {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.lastUpdate {
+    font-style: italic;
+    font-weight: 300;
+}
+
+a {
+    color: #0098ea;
+}
+
+.end {
+    width: 10px;
+    height: 10px;
+    margin-top: 10vh;
+}
+
+.heder {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+
+    height: 10vh;
+    padding: 0 13vw;
+}
+
+.heder img {
+    width: 50px;
+}
+
+.headerLogoText {
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.leftGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.back {
+    width: 12vw;
+    height: 6vh;
+    background-color: #1E2337;
+    margin-left: auto;
+    border-radius: 1000px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.topBtn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #1E2337;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    bottom: 6vh;
+    right: 16vw;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.topBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.topBtn:hover {
+    background-color: #2a314b;
+    transform: scale(1.05);
+}
+
+.topBtn svg {
+    width: 17px;
+    margin-top: -1px;
+}
+
+
+
+
+.topBtn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.topBtn:focus {
+    outline: none !important;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+button:focus, a:focus {
+    outline: none;
+}
+
+.back {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.back:focus {
+    outline: none;
+}
+
+
+@media (max-width: 480px) {
+    .framework {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    .mainHeading {
+        font-size: 1.7rem;
+    }
+
+    .lastUpdate {
+        font-size: 0.9rem;
+    }
+
+    li {
+        margin-left: 4vw;
+    }
+
+    li::marker {
+        font-size: 20px;
+    }
+
+
+    .heder img {
+        width: 40px;
+    }
+
+    .headerLogoText {
+        font-size: 1rem;
+    }
+
+    .heder {
+        padding: 0 5vw;
+    }
+
+    .back {
+        width: 40vw;
+        font-size: 0.8rem;
+    }
+
+    .topBtn {
+        right: 12vw;
+        width: 35px;
+        height: 35px;
+    }
+
+    .topBtn svg {
+        width: 16px;
+        margin-top: -2px;
+    }
+}

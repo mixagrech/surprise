@@ -194,5 +194,5 @@ window.addEventListener('resize', function() {
 });
 
 document.querySelector('.privacyBtn').addEventListener('click', function() {
-    window.location.href = 'surprise/privacy';
+    window.location.href = 'privacy';
 });

@@ -194,6 +194,6 @@ window.addEventListener('resize', function() {
 });
 
 document.querySelector('.privacyBtn').addEventListener('click', function() {
-    const baseUrl = 'https://mixagrech.github.io';
-    window.location.href = `${baseUrl}/surprise/privacy`;
+    window.location.href = '/surprise/privacy';
 });
+

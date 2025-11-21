@@ -306,6 +306,34 @@ button:focus, a:focus {
 }
 
 
+
+.langChange {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.langChange:active {
+    transform: scale(0.9);
+}
+
+.networkLogo {
+    margin-right: 0.3vw;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.lang {
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+
 @media (max-width: 480px) {
     .framework {
         width: 90vw;

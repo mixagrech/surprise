@@ -816,8 +816,40 @@ a:focus-visible {
   transform: scale(1.3);
 }
 
+.privacyBtn {
+  width: auto;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #1E2337;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0 25px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
 
+.privacyBtn:hover {
+  transform: scale(0.9);
+}
 
+.topBtnBottom {
+  display: flex;
+  flex-direction: row;
+  gap: 15vw;
+}
+
+.bottombtnsBottom {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
 
@@ -1220,20 +1252,51 @@ a:focus-visible {
     width: 88vw;
     left: 6vw;
     top: 380vh;
+    display: block;
   }
 
   .rlBtn {
     height: 35px;
-    margin-top: -20%;
   }
 
   .logotipes,
   .RlLog2 {
+    position: absolute;
+    z-index: 2;
     margin-top: 15%;
+  }
+
+  .RlLog2 {
+    left: 0px;
+  }
+
+  .logotipes {
+    right: 0px;
+    padding-top: 2vh;
+  }
+
+  .privacyBtn {
+    height: 35px;
+  }
+
+  .topBtnBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1vw;
+  }
+
+  .bottombtnsBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20vw;
+    margin-top: 1vh;
   }
   
   .t {
-    top: 0vh;
+    top: 402vh;
   }
 
   .titleLong1,
@@ -1572,20 +1635,51 @@ a:focus-visible {
     width: 88vw;
     left: 6vw;
     top: 380vh;
+    display: block;
   }
 
   .rlBtn {
     height: 35px;
-    margin-top: -20%;
   }
 
   .logotipes,
   .RlLog2 {
+    position: absolute;
+    z-index: 2;
     margin-top: 15%;
   }
-  
+
+  .RlLog2 {
+    left: 0px;
+  }
+
+  .logotipes {
+    right: 0px;
+    padding-top: 2vh;
+  }
+
+  .privacyBtn {
+    height: 35px;
+  }
+
+  .topBtnBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1vw;
+  }
+
+  .bottombtnsBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20vw;
+    margin-top: 1vh;
+  }
+
   .t {
-    top: 0vh;
+    top: 400vh;
   }
 
   .titleLong1,

@@ -192,3 +192,7 @@ window.addEventListener('resize', function() {
     const currentLang = localStorage.getItem('userLanguage') || 'en';
     setLanguage(currentLang);
 });
+
+document.querySelector('.privacyBtn').addEventListener('click', function() {
+    window.location.href = '/privacy';
+});

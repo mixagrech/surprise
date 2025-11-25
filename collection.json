@@ -1,9 +1,7 @@
 {
-    "name": "My Awesome NFT Collection",
-    "description": "A collection of unique digital assets on TON blockchain",
-    "image": "https://fuchsia-genetic-jellyfish-105.mypinata.cloud/ipfs/bafkreichpo5lwaprdcrhoddnls4k3kou6gvja43h6lfligybwyi3yusrom",
-    "cover_image": "https://fuchsia-genetic-jellyfish-105.mypinata.cloud/ipfs/bafkreichpo5lwaprdcrhoddnls4k3kou6gvja43h6lfligybwyi3yusrom",
-    "social_links": [
-        "https://t.me/voxel_verse_bot"
-    ]
+  "name": "MetaForest_Bunnies",
+  "image": "https://fuchsia-genetic-jellyfish-105.mypinata.cloud/ipfs/bafkreichpo5lwaprdcrhoddnls4k3kou6gvja43h6lfligybwyi3yusrom",
+  "description": "Welcome to magical realverse forest",
+  "fee_recipient": "EQC42dbQdA_9VveJjgs5MY1wg7EXf6VKCUK5UtirlB1wYaA2",
+  "seller_fee_basis_points": 500
 }

@@ -1,0 +1,19 @@
+{
+    "name": "Awesome NFT #1",
+    "description": "The first NFT in my amazing collection",
+    "image": "chrome://favicon2/?size=256&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2Fwww.figma.com%2Fdesign%2FlGKF5etPWoK3OOx88MLIEs%2F%25D1%2582%25D0%25B0%25D0%25BF%25D0%25B0%25D0%25BB%25D0%25BA%25D0%25B0%3Fnode-id%3D116-2%26t%3DV7yuYHNxkQwkp9ou-1",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "First"
+        }
+    ]
+}

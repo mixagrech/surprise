@@ -1,11 +1,6 @@
 {
-    "name": "Awesome NFT #1",
-    "description": "The first NFT in my amazing collection",
-    "image": "https://fuchsia-genetic-jellyfish-105.mypinata.cloud/ipfs/bafkreichpo5lwaprdcrhoddnls4k3kou6gvja43h6lfligybwyi3yusrom",
-    "attributes": [
-        {
-            "trait_type": "Game",
-            "value": "ROW-LIVE"
-        },
-    ]
+  "image": "https://s.getgems.io/nft/c/6903652e16d7fd2d5e938b98/7/image.png",
+  "description": "Этот милый оранжевый кот — воплощение тепла, игривости и лёгкого озорства. Его большие круглые глаза смотрят на мир с искренним любопытством, а аккуратные полоски на шерсти придают неповторимый шарм.\nNFT создан в стильной мультяшной эстетике, идеально подходящей для коллекционных наборов, игровых предметов и цифровых питомцев.",
+  "marketplace": "getgems.io",
+  "name": "Orange Tabby Cat — Curious Friend #2"
 }

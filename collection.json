@@ -1,0 +1,10 @@
+{
+    "name": "My Awesome NFT Collection",
+    "description": "A collection of unique digital assets on TON blockchain",
+    "image": "chrome://favicon2/?size=256&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2Fwww.bazaart.com%2F",
+    "cover_image": "chrome://favicon2/?size=256&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2Fwww.bazaart.com%2F",
+    "social_links": [
+        "https://twitter.com/yourusername",
+        "https://t.me/yourchannel"
+    ]
+}

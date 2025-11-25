@@ -1,19 +1,11 @@
 {
     "name": "Awesome NFT #1",
     "description": "The first NFT in my amazing collection",
-    "image": "https://postila.ru/resize?w=460&src=%2Fs3%2Fc93%2F14%2F0f23d7eb09f0f0b35623493ee44.jpg",
+    "image": "https://fuchsia-genetic-jellyfish-105.mypinata.cloud/ipfs/bafkreichpo5lwaprdcrhoddnls4k3kou6gvja43h6lfligybwyi3yusrom",
     "attributes": [
         {
-            "trait_type": "Background",
-            "value": "Blue"
+            "trait_type": "Game",
+            "value": "ROW-LIVE"
         },
-        {
-            "trait_type": "Rarity",
-            "value": "Common"
-        },
-        {
-            "trait_type": "Edition",
-            "value": "First"
-        }
     ]
 }

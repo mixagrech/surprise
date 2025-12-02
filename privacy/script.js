@@ -1,3 +1,6 @@
+let tg = window.Telegram.WebApp;
+tg.setHeaderColor("#ffffffff");
+
 document.querySelector('.back').addEventListener('click', () => {
     window.history.back();
 });
